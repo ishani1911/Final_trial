@@ -1,706 +1,2046 @@
-<!DOCTYPE html>
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" /> 
+/*-----------------------------------------------------------------------------------
 
-    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-    <title>SoDo</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-     <!--====social media icons====-->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <!--Fontawesome icons-->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  CSS INDEX
+  ===================
 
-<!--Bootstrap CSS-->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/slick-theme.css">
-    <link rel="stylesheet" href="css/LineIcons.2.0.css">
-	<link rel="stylesheet" href="css/font-awesome.min.css">
-        
-    <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" href="css/bootstrap-4.5.0.min.css">
-    
-    <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="css/default.css">
-    
-    <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="css/style.css">
-	
-	
+  01.COMMON 
+  02.HEADER
+  03.FEATURES
+  04.ABOUT
+  05.FAQ
+  08.TEAM
+  09.TESTIMONIAL
+  10.BLOG
+  11.FOOTER
 
-    <!--====== Animate CSS ======-->
-    <link rel="stylesheet" href="assets/css/animate.css">
-                
-    <!--====== Line Icons CSS ======-->
-    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
-        
-    <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap-4.5.0.min.css">
+-----------------------------------------------------------------------------------*/
+/*===========================
+  01.COMMON css 
+===========================*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,700|Lato:300,400,700&display=swap");
+body {
+  font-family: "Lato", sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #6A6972;
+  overflow-x:auto;
+   }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+
+
+img {
+  max-width: 100%; }
+
+a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+  text-decoration: none;
+  outline: none; }
+
+a:focus,
+a:hover {
+  text-decoration: none; }
+
+i,
+span,
+a {
+  display: inline-block; }
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+  vertical-align: middle; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  color: #2E2E2E;
+  margin: 0px; }
+
+h1 {
+  font-size: 48px; }
+
+h2 {
+  font-size: 36px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 22px; }
+
+h5 {
+  font-size: 18px; }
+
+h6 {
+  font-size: 16px; }
+
+ul, ol {
+  margin: 0px;
+  padding: 0px;
+  list-style-type: none; }
+
+p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  color: #6A6972;
+  margin: 0px; }
+
+.bg_cover {
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 650px; }
+
+/*===== All Slick Slide Outline Style =====*/
+.slick-slide {
+  outline: 0; }
+
+/*===== All Button Style =====*/
+.main-btn {
+  display: inline-block;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 0 25px;
+  font-size: 16px;
+  line-height: 48px;
+  border-radius: 8px;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  z-index: 5;
+  -webkit-transition: all 0.4s ease-out 0s;
+  -moz-transition: all 0.4s ease-out 0s;
+  -ms-transition: all 0.4s ease-out 0s;
+  -o-transition: all 0.4s ease-out 0s;
+  transition: all 0.4s ease-out 0s;
+  background: -webkit-linear-gradient(left, #000000 0%, #2E2E2E 50%, #000000 100%);
+  background: -o-linear-gradient(left, #000000 0%, #2e2e2e 50%, #000000 100%);
+  background: linear-gradient(to right, #000000 0%, #2e2e2e 50%, #000000 100%);
+  background-size: 200%; }
+  .main-btn:hover {
+    color: #fff;
+    background-position: right center; }
+
+/*===== All SECTION TITLE Style =====*/
+.section-title .line {
+  background: -webkit-linear-gradient(#fe8464 0%, #fe6e9a 100%);
+  background: -o-linear-gradient(#fe8464 0%, #fe6e9a 100%);
+  background: linear-gradient(#fe8464 0%, #fe6e9a 100%);
+  width: 150px;
+  height: 5px;
+  margin-bottom: 10px !important; }
+
+.section-title .title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 42px; }
+  @media (max-width: 767px) {
+    .section-title .title {
+      font-size: 20px; } }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .section-title .title {
+      font-size: 30px; } }
+  .section-title .title span {
+    font-weight: 400;
+    display: contents; }
+
+    @media(max-width:575px){
+       .section-title .title {
+      overflow-x: hidden; } 
+    }
+
+/*===== All Section Title Style =====*/
+.section-title .line {
+  background: -webkit-linear-gradient(#fe8464 0%, #fe6e9a 100%);
+  background: -o-linear-gradient(#fe8464 0%, #fe6e9a 100%);
+  background: linear-gradient(#fe8464 0%, #fe6e9a 100%);
+  width: 150px;
+  height: 5px;
+  margin-bottom: 10px !important; }
+
+.section-title .title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 42px }
+
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .section-title .title {
+      font-size: 20px } }
+
+  @media(max-width: 575px){
+    .section-title .title{
+      font-size: 20px;
+      /*overflow-x: hidden;*/
+    }
+  }
+  .section-title .title span {
+    font-weight: 400;
+    display: contents; }
+
+/*===== All Section Title Style =====*/
+.section-title .sub-title {
+  font-size: 18px;
+  font-weight: 400;
+  color: #361CC1;
+  text-transform: uppercase;
+  text-align: center }
+  @media (max-width: 767px) {
+    .section-title .sub-title {
+      font-size: 16px;
+       } }
+
+.section-title .title {
+  font-size: 32px;
+  padding-top: 10px;
+  text-align: center }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .section-title .title {
+      font-size: 30px; } }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .section-title .title {
+      font-size: 20px } }
+
+  @media(max-width: 575px){
+    .section-title .title{
+      font-size: 20px;
+    }
+  }
+  .section-title .title span {
+    font-weight: 400;
+    display: contents; }
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .section-title .title span {
+       font-size: 20px;
+      font-weight:200 } }
+
+  @media(max-width: 575px){
+    .section-title .title span{
+      font-size: 20px;
+      font-weight:200;
+    }
+  }
+/*===== All Slick Slide Outline Style =====*/
+.slick-slide {
+  outline: 0; }
+
+/*===========================
+      02.HEADER css 
+===========================*/
+
+/*===social media icon====*/
+.fa {
+  padding: 10px;
+  font-size: 15px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+  color: white;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+  color: white;
+}
+
+.fa-instagram {
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  box-shadow: 0px 3px 10px rgba(0,0,0,.25);
+  color: white;
+}
+
+/*=====end social media icon=====*/
+
+
+/*===== NAVBAR =====*/
+
+.navbar-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; 
+  height: 72px; 
+  z-index: 99;
+  /*background-color: #fff;*/
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s; }
+
+.sticky {
+  position: fixed;
+  z-index: 99;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s; }
+  .sticky .navbar {
+    padding: 10px 0; }
+
+.navbar {
+  padding: 0 0 ;
+  border-radius: 5px;
+  position: relative;
+  background-color: #fff;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s; }
+
+.navbar-brand {
+  padding: 0; }
+
+.navbar-toggler {
+  padding: 0; }
+  .navbar-toggler .toggler-icon {
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    display: block;
+    margin: 5px 0;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; }
+  .navbar-toggler.active .toggler-icon:nth-of-type(1) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    top: 7px; }
+  .navbar-toggler.active .toggler-icon:nth-of-type(2) {
+    opacity: 0; }
+  .navbar-toggler.active .toggler-icon:nth-of-type(3) {
+    -webkit-transform: rotate(135deg);
+    -moz-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    -o-transform: rotate(135deg);
+    transform: rotate(135deg);
+    top: -7px; }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+    -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 5px 12px; } }
+
+@media (max-width: 767px) {
+  .navbar-collapse {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 9;
+    -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
+    padding: 5px 12px; 
+    } }
+
+.navbar-nav .nav-item {
+  margin-right: 45px;
+  position: relative; }
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .navbar-nav .nav-item {
+      margin-right: 30px; } }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .navbar-nav .nav-item {
+      margin: 0; } }
+  @media (max-width: 767px) {
+    .navbar-nav .nav-item {
+      margin: 0;
+       } }
+  .navbar-nav .nav-item a {
+    font-size: 16px;
+    font-weight: 400;
+    color: #000;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+    padding: 10px 0;
+    position: relative;
+    font-family: "Poppins", sans-serif; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .navbar-nav .nav-item a {
+        display: block;
+        padding: 4px 0;
+        color: #2E2E2E; } }
+    @media (max-width: 767px) {
+      .navbar-nav .nav-item a {
+        display: block;
+        padding: 4px 0;
+        color: #2E2E2E; } }
+  .navbar-nav .nav-item:hover .sub-menu {
+    top: 100%;
+    opacity: 1;
+    visibility: visible; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .navbar-nav .nav-item:hover .sub-menu {
+        top: 0; } }
+    @media (max-width: 767px) {
+      .navbar-nav .nav-item:hover .sub-menu {
+        top: 0; } }
+  .navbar-nav .nav-item .sub-menu {
+    width: 200px;
+    background-color: #000;
+    -webkit-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 110%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; }
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .navbar-nav .nav-item .sub-menu {
+        position: relative;
+        width: 100%;
+        top: 0;
+        display: none;
+        opacity: 1;
+        visibility: visible; } }
+    @media (max-width: 767px) {
+      .navbar-nav .nav-item .sub-menu {
+        position: relative;
+        width: 100%;
+        top: 0;
+        display: none;
+        opacity: 1;
+        visibility: visible; } }
+    .navbar-nav .nav-item .sub-menu li {
+      display: block; }
+      .navbar-nav .nav-item .sub-menu li a {
+        display: block;
+        padding: 8px 10px;
+        color: #2E2E2E; }
+        .navbar-nav .nav-item .sub-menu li a.active, .navbar-nav .nav-item .sub-menu li a:hover {
+          padding-left: 25px;
+          color: #000000; }
+
+.navbar-nav .sub-nav-toggler {
+  display: none; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .navbar-nav .sub-nav-toggler {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: none;
+      color: #2E2E2E;
+      font-size: 18px;
+      border: 0;
+      width: 30px;
+      height: 30px; } }
+  @media (max-width: 767px) {
+    .navbar-nav .sub-nav-toggler {
+      display: block;
+      position: absolute;
+      right: 0;
+      top: 0;
+      background: none;
+      color: #2E2E2E;
+      font-size: 18px;
+      border: 0;
+      width: 30px;
+      height: 30px; } }
+  .navbar-nav .sub-nav-toggler span {
+    width: 8px;
+    height: 8px;
+    border-left: 1px solid #2E2E2E;
+    border-bottom: 1px solid #2E2E2E;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    position: relative;
+    top: -5px; }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .navbar-btn {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); } }
+
+@media (max-width: 767px) {
+  .navbar-btn {
+    position: absolute;
+    top: 50%;
+    right: 50px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%); 
+    } }
+
+.navbar-btn .main-btn {
+  height: 45px;
+  line-height: 45px;
+  background: -webkit-linear-gradient(left, #000000 0%, #2E2E2E 50%, #000000 100%);
+  background: -o-linear-gradient(left, #000000 0%, #2e2e2e 50%, #000000 100%);
+  background: linear-gradient(to right, #000000 0%, #2e2e2e 50%, #000000 100%);
+  background-size: 200%; }
+  .navbar-btn .main-btn:hover {
+    color: #fff;
+    background-position: right center; }
+
+.sticky .navbar-toggler .toggler-icon {
+  background-color: #ffffff;
+  color: #000000;}
+
+.sticky .navbar-nav .nav-item a {
+  color: #2E2E2E; }
+
+.sticky .navbar-nav .nav-item.active > a, .sticky .navbar-nav .nav-item:hover > a {
+  color: #fc9432; }
+
     
-    <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="assets/css/default.css">
     
-    <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/slick.css">
-    <link rel="stylesheet" href="assets/css/slick-theme.css">
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">	
-	
-  <!--===== Plugins CSS =====-->
-    <link rel="stylesheet" href="./plugins/bootstrap-4.3.1/css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="./plugins/meanmenu/meanmenu.css" />
-    <link rel="stylesheet" href="./plugins/slick-1.8.1/slick.css" />
-    <link
-      rel="stylesheet"
-      href="./plugins/fancybox-master/jquery.fancybox.min.css"
-    />
-    <link rel="stylesheet" href="./plugins/aos-animation/aos.css" />
-    <!-- fonts -->
-    <link rel="stylesheet" href="./fonts/ep-icon-fonts/css/style.css" />
+    
+
+/*===== HEADER HERO =====*/
+
+.header-hero {
+  /*position: relative;
+  z-index: 5;
+  background-position: center;
+ position: relative;*/
+    background-image: linear-gradient(135deg,  rgba(129, 40, 184, 0.8), rgba(36, 52, 149, 0.9) 56%, rgba(28, 23, 77, 0.95)), url("https://assets.website-files.com/545b7de2766e48c834ce8b85/546b2767bbe0f1b63a20e75a_U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de-min.jpg");
+    background-position: 0px 0px, 50% 50%;
+    background-size: auto, cover;
+    background-attachment: scroll, fixed;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease; 
+
+}
+#particles-1 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; }
+
+.header-hero-content {
+  padding-top: 180px; }
+  @media (max-width: 767px) {
+    .header-hero-content {
+      padding-top: 100px; 
+      overflow-x: hidden;} }
+  .header-hero-content .header-sub-title {
+    font-size: 38px;
+    font-weight: 300;
+    color: #fff; }
+    @media (max-width: 767px) {
+      .header-hero-content .header-sub-title {
+        font-size: 24px; } }
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      .header-hero-content .header-sub-title {
+        font-size: 30px; } }
+  .header-hero-content .header-title-black {
+    font-size: 38px;
+    font-weight: 700;
+    color: #000; }
+    @media (max-width: 767px) {
+      .header-hero-content .header-title-black {
+        font-size: 24px; } }
+    @media only screen and (min-width: 576px) and (max-width: 767px) {
+      .header-hero-content .header-title-black {
+        font-size: 30px; } }
+  .header-hero-content .text {
+    color: #fff;
+    margin-top: 30px; }
+  .header-hero-content .main-btn {
+    margin-top: 40px; }
+
+.header-hero-image {
+  padding-top: 45px;
+  }
+  .header-hero-image img {
+    max-width: 650px;}
+  @media (max-width: 767px) {
+    .header-hero-image img {
+      max-width: 100%; } 
+    }
+  @media (max-width: 767px) {
+    .header-hero-image {
+      padding-top: 30px; } 
+    }
+
+/*===========================
+      03.BRAND css 
+===========================*/
+@media (max-width: 767px) {
+  .brand-logo {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; } }
+
+.single-logo {
+  padding: 0 30px; }
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    .single-logo {
+      padding: 0 15px; } }
+  @media (max-width: 767px) {
+    .single-logo {
+      padding: 0 15px; } }
+  @media (max-width: 767px) {
+    .single-logo {
+      width: 50%; } }
+  @media only screen and (min-width: 576px) and (max-width: 767px) {
+    .single-logo {
+      width: 33.33%; } }
+  .single-logo img {
+    width: 100%;
+    opacity: 0.5;
+    -webkit-transition: all 0.3s ease-out 0s;
+    -moz-transition: all 0.3s ease-out 0s;
+    -ms-transition: all 0.3s ease-out 0s;
+    -o-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s; }
+  .single-logo:hover img {
+    opacity: 1; }
+/*===========================
+     FEATURES
+===========================*/
+
+.features{
+margin-top: 40px;
+}
+
+.blurb .head-name{
+    font-weight: 100;
+    font-size: 2.5rem;
+}
+
+.blurb .lead{
+    font-weight: 100;
+    font-size: 1.125rem;
+    line-height: 2;
+}
+.content{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/*.row {
+  position: relative;
+}*/
+
+.fade1::after {
+  content: 'CLEAN';
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background: black;
+  width: 98%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade1:hover::after {
+  opacity: 0.5;
+}
+
+.fade2::after {
+  content: 'ROBUST';
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background: black;
+  width: 98%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 14px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade2:hover::after {
+  opacity: 0.5;
+}
+
+.fade3::after {
+  content: 'POWERFUL';
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  background: black;
+  width: 98%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.fade3:hover::after {
+  opacity: 0.5;
+}
+
+.head-name {
+  background: none;
+  border:2px solid;
+  color: #FF8C00;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+}
+
+.head-name::before,.head-name::after{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background: white;
+  transform: skewX(50deg);
+  transition: .4s linear;
+}
+
+.head-name::before{
+  top: -4px;
+  left: 10%;
+}
+
+.head-name::after{
+  bottom: -4px;
+  right: 10%;
+}
+
+.head-name:hover::before{
+  left: 80%;
+}
+
+.head-name:hover::after{
+  right: 80%;
+}
+
+.lead {
+  margin-top: 30px;
+}
+
+.featureref {
+  padding-top: 20px;
+}
+
+/*==========================
+     SCREENSHOTS
+===========================*/
+
+.mb--50 {
+  margin-bottom: 50px !important;
+}
+
+
+
+@media (min-width: 992px) {
+  .mb-lg--70 {
+    margin-bottom: 70px !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  .mb-lg--70 {
+    margin-bottom: 70px;
+  }
+}
+
+
+
+
+/* /////////////////////////// 
+    Example Section
+//////////////////////////// */
+.example-section {
+  background-color: white;
+  z-index: 1;
+}
+
+.example-section .section-title {
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .example-section .section-title {
+    margin-bottom: 60px;
+  }
+}
+
+
+
+.example-slider-wrapper {
+  position: relative;
+  margin-top: 40px;
+}
+
+.example-slider-wrapper .slick-arrow {
+  position: absolute;
+  top: 50%;
+  left: 5%;
+  font-size: 20px;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transition: .4s;
+  transition: .4s;
+  background-color: transparent;
+  color: black;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: 99;
+}
+
+@media (min-width: 1366px) {
+  .example-slider-wrapper .slick-arrow {
+    left: 5%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .example-slider-wrapper .slick-arrow {
+    left: 27%;
+  }
+}
+
+.example-slider-wrapper .slick-arrow:hover {
+  background: black;
+  color: white;
+}
+
+.example-slider-wrapper .slick-arrow.slick-next {
+  left: auto;
+  right: 5%;
+}
+
+@media (min-width: 1600px) {
+  .example-slider-wrapper .slick-arrow.slick-next {
+    right: 20%;
+  }
+}
+
+@media (min-width: 1800px) {
+  .example-slider-wrapper .slick-arrow.slick-next {
+    right: 29%;
+  }
+}
+
+.example-slider-wrapper .slick-dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 70px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+          transform: translate(-50%);
+}
+
+@media (min-width: 768px) {
+  .example-slider-wrapper .slick-dots {
+    margin-top: 70px;
+  }
+}
+
+.example-slider-wrapper .slick-dots li {
+  font-size: 0;
+  background-color: #000000;
+  cursor: pointer;
+  opacity: 0.3;
+  height: 10px;
+  width: 10px;
+  border: 6px solid black;
+  border-radius: 500px;
+  margin: 0 5px;
+}
+
+.example-slider-wrapper .slick-dots li.slick-active {
+  opacity: 1;
+  border: 7px solid black;
   
-    <!-- Custom Stylesheet -->
-    <link rel="stylesheet" href="./css/settings.css" />
-    <link rel="stylesheet" href="./css/style.css" />
-	
-	
-      
-</head>
-
-<body>
-       
-    <header class="header-area mb-40" style="height:865px">
-    <div class="navbar-area">
-     <div class="container">
-        <div class="row">
-           <div class="col-lg-12">
-        <nav class="navbar navbar-expand-lg bg-transparent pb-10">
-        <a class="navbar-brand mb-10" href="#"><img src="images/logo.png" alt="logo"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="toggler-icon"></span>
-	  <span class="toggler-icon"></span>
-	  <span class="toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-          <ul id="nav" class="navbar-nav ml-auto pb-10">
-            <li class="nav-item active">
-              <a class="page-scroll" href="#home">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="page-scroll" href="#features">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="page-scroll" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="page-scroll" href="#team">Team</a>
-            </li>  
-            <li class="nav-item">
-              <a class="page-scroll" href="#blog">Blog</a>
-            </li>
-
-          </ul>
-          <a href="#" class="fa fa-facebook mb-10"></a>
-          <a href="#" class="fa fa-twitter mb-10"></a>
-          <a href="#" class="fa fa-instagram mb-10"></a>
-          <a href="#" class="fa fa-linkedin mb-10"></a>
-        
-        </div>
-      </nav>
-    </div>
-  </div>
-</div>
-</div>	    
-      <div id="home" class="header-hero bg_cover" style="height:800px">
-        <div class="container mb-40">
-            <div class="row pt-60">
-                <div class="col-md-6 justify-content-left">
-                    <div class="header-hero-content text-left wow fadeInLeft">
-                        <h3 class="header-sub-title">Want to get a job done?</h3>
-                        <h2 class="header-title-black">HIRE THE BEST WITH US</h2>
-                        <p class="text">Get assured with SoDo</p>
-                        <a href="#" class="main-btn">Hire</a>
-                        <a href="#" class="main-btn">Apply</a><br>
-                        
-                    </div> <!-- header hero content -->
-		   
-                </div>
-		
-                <div class="col-md-6 content-right pt-70 pl-120 mb-40" style="padding-top: 70px; padding-left: 15px;">
-                 <div class="header-hero-image wow RiseUpBig mb-40">
-                  <img src="images/ss.png" class="img-fluid" style="height:520px">  
-                </div>
-                </div>
-             </div> <!-- row -->
-        
-        </div> <!-- container -->
-        <div id="particles-1" class="particles"></div>
-    </div> <!-- header hero -->      
-</header>
-<!--====HEADER ENDS====-->
-	
- <!--=====FEATURES========-->  
-    <section class="features mt-40 mb-40">
-    <div class="container ">
-    <div class="section-title text-center pt-40">
-    	<br><br><br>
-    <div class="line m-auto"></div>
-    <h5 class="sub-title">SERVICES</h5>
-    <h3 class="title" style="color: black;font-size: 18px;">Clean and simple designs,<b> Comes with everything you need to get started!</b></h3>
-	    </div>
-</section>	
-     <section class="container-fluid px-0">
-
-
-            <div class="row align-items-center content"> 
-                <div class="col-md-6 text-center order-1 order-md-2">
-                   <div class="row justify-content-center">
-                       <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
-                            <h2 class="head-name">CLEAN</h2>     
-                    <p class="lead" style="color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut praesentium providen
-                        t quidem quam laborum, fugit magnam suscipit ut modi excepturi eius! 
-                        Rem exercitationem maiores mollitia voluptate, illum nulla voluptates cumque.</p>
-                        <a href="#" class="featureref">Learn more</a>
-                       </div>
-                   </div>
-                </div>
-                <div class="col-md-6 order-2 order-md-1 fade1  wow fadeInLeftBig" data-wow-duration="2s" data-wow-delay="0.2s">
-                    <img src="images/clean.jpg" class="rounded-circle img-fluid" alt="">
-                </div>
-            </div>
-
-            <div class="row align-items-center content"> 
-              
-                    <div class="col-md-6 text-center">
-                       <div class="row justify-content-center">
-                           <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
-                                <h2 class="head-name">ROBUST</h2>    
-                        <p class="lead" style="color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut praesentium providen
-                            t quidem quam laborum, fugit magnam suscipit ut modi excepturi eius! 
-                            Rem exercitationem maiores mollitia voluptate, illum nulla voluptates cumque.</p>
-                            <a href="#" class="featureref">Learn more</a>
-                           </div>
-                       </div>
-                    </div>
-                     <div class="col-md-6 order-2 order-md-1 fade2  wow fadeInRightBig" data-wow-duration="2s" data-wow-delay="0.5s">
-                            <img src="images/robust.jpg" class="rounded-circle img-fluid" alt="">
-                    </div>
-                </div>
-
-            <div class="row align-items-center content">
-                        <div class="col-md-6 text-center order-1 order-md-2">
-                           <div class="row justify-content-center">
-                               <div class="col-10 col-lg-8 blurb mb-5 mb-md-0">
-                                    <h2 class="head-name">POWERFUL</h2>     
-                            <p class="lead" style="color: black;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut praesentium providen
-                                t quidem quam laborum, fugit magnam suscipit ut modi excepturi eius! 
-                                Rem exercitationem maiores mollitia voluptate, illum nulla voluptates cumque.</p>
-                                <a href="#" class="featureref">Learn more</a>
-                               </div>
-                           </div>
-                        </div>
-                         <div class="col-md-6 order-2 order-md-1 fade3  wow fadeInLeftBig" data-wow-duration="2s" data-wow-delay="0.8s">
-                            <img src="images/powerful.jpg" class="rounded-circle img-fluid" alt="">
-                        </div>
-                    </div>
-        
-                
-        </section>
-<!--===Features ends===-->
-
-
-<!-- ScreenShots area-->
-	
-<div class="site-wrapper">
-   <div class="section-title text-center pb-40">
-       <div class="line m-auto"></div>
-	   <h5 class="sub-title">Screenshots</h5>
-   </div> <!-- section title -->
-
-      <!-- Example Section -->
-      <section class="example-section position-relative">
-        
-        <div class="container-fluid px--0">
-          <div class="example-slider-wrapper mb--20 mb-lg--70">
-                            <div class="example-slider">
-                                <div class="single-slide">
-                                    <div class="example-image">
-                                        <img src="./images/BG (1).png" alt="" height="600px" width="300px"/>
-                                    </div>
-                                </div>
-        
-                                <div class="single-slide">
-                                    <div class="example-image">
-                                        <img src="./images/BG.png" alt="" height="600px" width="300px"/>
-                                    </div>
-                                </div>
-        
-                                <div class="single-slide">
-                                    <div class="example-image">
-                                        <img src="./images/BG (2).png" alt="" height="600px" width="300px"/>
-                                    </div>
-                                </div>
-        
-                                <div class="single-slide">
-                                    <div class="example-image">
-                                        <img src="./images/BG (3).png" alt="" height="600px" width="300px"/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="phone-bg-img">
-                                <img src="images/iphone-xr.svg" alt="" height="600px" width="300px"/>
-                            </div>
-                    </div>
-         </div>
-      </section>
-</div>
-
-
-<!-- ScreenShots area end-->
-	
-
-<!--====Testimonial starts====-->
-
-<section id="testimonial" class="testimonial-area pt-20 mt-40 mb-40" background-color:transparent>
-<div class="section-title">
-<div class="line m-auto"></div>
-<h5 class="sub-title">Testimonials</h5>
-<h3 class="title">See What Our <b>Clients Say About Us</b></h3>
-</div> 
-<div class="container">
-<div class="row align-items-center">
-<div class="col-xl-4 col-lg-3">
-<div class="testimonial-author mt-20">
-
-<div class="testimonial-author-wrapper">
-<div class="testimonial-quote d-flex align-items-center justify-content-center">
-<img src="images/quote.svg" alt="quote">
-</div>
-<div class="testimonial-author-slider">
-<div class="single-author">
-<img src="images/author-1.jpg" alt="author">
-</div>
-<div class="single-author">
-<img src="images/author-2.jpg" alt="author">
-</div>
-<div class="single-author">
-<img src="images/author-3.jpg" alt="author">
-</div>
-</div>
-</div>
-</div> 
-</div>
-<div class="col-xl-8 col-lg-9">
-<div class="testimonial-wrapper wow fadeInRightBig" data-wow-duration="2s" data-wow-delay="0.5s">
-<div class="testimonial-content">
-<div class="single-testimonial">
-<p class="text">Lorem ipsum dolor sitrg amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna iquyam erat, sed diam voluptua. At vero eos et accusam et justo dudolores etea rebum. Stet clita kasd gubergren, no sea takimata sanctus esth Lorem ipsum dolor sit amet.</p>
-<h4 class="holder-name">Jessica John <span>/ Creative Designer</span></h4>
-</div> 
-<div class="single-testimonial">
-<p class="text">Lorem ipsum dolor sitrg amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna iquyam erat, sed diam voluptua. At vero eos et accusam et justo dudolores etea rebum. Stet clita kasd gubergren, no sea takimata sanctus esth Lorem ipsum dolor sit amet.</p>
-<h4 class="holder-name">Michel Smith <span>/ Entrepreneur</span></h4>
-</div> 
-<div class="single-testimonial">
-<p class="text">Lorem ipsum dolor sitrg amet, consetetur sadipscing elitr sed diam nonumy eirmod tempor invidunt ut labore et dolore magna iquyam erat, sed diam voluptua. At vero eos et accusam et justo dudolores etea rebum. Stet clita kasd gubergren, no sea takimata sanctus esth Lorem ipsum dolor sit amet.</p>
-<h4 class="holder-name">Sara Smith <span>/ Startup Founder</span></h4>
-
-</div> 
-</div> 
-<a href="#" class="main-btn">Add Review</a>
-</div> 
-</div>
-</div>
-</section>
-
-<!--==Testimonial ends==-->
-	
-<!--====TEAM======-->	
-   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-   <section id="header" class="jumbotron text-center" style="background: url(images/pic1.jpg) center center / cover no-repeat;">
-	<div class="container">
-          <strong><h1 class="display" style="color: white;">TEAM</h1></strong>
-              <h3 class="lead">Meet Our Creative Team Members</h3>  
-        </div> 
-   </section>
-     
-<section>
-	<div class="team-grid">
-     	<div class="container">
-         <div class="intro">
-         </div>
-         <div class="row people d-flex justify-content-center">
-             <div class="col-md-4 col-lg-3 item">
-                 <div class="box" style="background-image:url(https://i.imgur.com/HjKTNkG.jpg)">
-                     <div class="cover">
-                         <p class="title">Founder and CEO</p>
-                         <div class="social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                     </div>
-                 </div>
-              <h3 class="name">Tim Cook</h3>
-             </div>
-             <div class="col-md-4 col-lg-3 item">
-                 <div class="box" style="background-image:url(https://i.imgur.com/WgXRMDs.jpg)">
-                     <div class="cover">
-                         
-                         <p class="title">Sr. Software Engineer</p>
-                         <div class="social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                     </div>
-                 </div>  <h3 class="name">Michael Clarke</h3>
-             </div>
-             <div class="col-md-4 col-lg-3 item">
-                 <div class="box" style="background-image:url(https://i.imgur.com/0Cdlenp.jpg)">
-                     <div class="cover">
-                    
-                         <p class="title">Business Analyst</p>
-                         <div class="social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i><a href="#"><i class="fa fa-linkedin"></i></a><a href="#"><i class="fa fa-instagram"></i></a></div>
-                     </div>
-                 </div>  <h3 class="name">Carlos vento</h3>
-             </div>
-         </div>
-     </div>
- </div>
- </section>
-	     
-<!--====TEAM ENDS====-->	
-	
-<!--===BLOG start==-->
-<section id="blog" class="blog-area mt-40 mb-40">
-<div class="container">
-<div class="row justify-content-center mt-50">
-<div class="col-lg-6">
-<div class="section-title text-center pb-40">
-<div class="line m-auto"></div>
-<h5 class="sub-title">Blog</h5>
-<h3 class="title">Learn More From<br> Our <b>Latest News</b></h3>
-</div> 
-</div>
-</div> 
-<div class="row justify-content-center">
-<div class="col-lg-4 col-md-7">
-<div class="single-blog mt-30 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.2s">
-<div class="blog-image">
-<img src="images/author-1.jpg" alt="blog">
-</div>
-<div class="blog-content">
-  <div class="mt-10">
-<h4 class="blog-title"><a href="#">Business Growth & Analysis</a></h4>
-</div>
-<div class="blog-meta">
-  
-<ul class="blog-list">
-<li> By- <a href="#">Abraham</a></li>
-<div class="mt-10">
-<li><a href="#">15 Feb, 2022</a></li>
-</div>
-</ul>
-</div>
-<div class="blog-text">
-
-<p class="text">Lorem ipsum dolor sit aconsect dipisicing elit, sed do eiusmod to incididunt uabore etdolore magna aliqua.</p>
-<a class="more btn btn-lg btn-blog-bg" href="#"> Read More</a>
-</div>
-</div>
-</div> 
-</div>
-
-
-<div class="col-lg-4 col-md-7">
-<div class="single-blog mt-30 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.2s">
-<div class="blog-image">
-<img src="images/author-2.jpg" alt="blog">
-</div>
-<div class="blog-content">
-<div class="mt-10">
-<h4 class="blog-title"><a href="#">Digital Market Analysis</a></h4>
-</div>
-<div class="blog-meta">
-  
-<ul class="blog-list">
-<li>BY- <a href="#">Jesika Jon</a></li>
-<div class="mt-10">
-<li><a href="#">15 Feb, 2022</a></li>
-</div>
-</ul>
-</div>
-<div class="blog-text">
-
-<p class="text">Lorem ipsum dolor sit aconsect dipisicing elit, sed do eiusmod to incididunt uabore etdolore magna aliqua.</p>
-<a class="more btn btn-lg btn-blog-bg" href="#"> Read More</span></a>
-</div>
-</div>
-</div> 
-</div>
-
-
-<div class="col-lg-4 col-md-7">
-<div class="single-blog mt-30 wow fadeInUpBig" data-wow-duration="2s" data-wow-delay="0.2s">
-<div class="blog-image">
-<img src="images/author-3.jpg" alt="blog">
-</div>
-<div class="blog-content">
-  <div class="mt-10">
-<h4 class="blog-title text-dark"><a href="#"> Creative Product Analysis</a></h4>
-</div>
-<div class="blog-meta">
-
-<ul class="blog-list">
-<li>BY- <a href="#">Michel Smith</a></li>
-<div class="mt-10">
-<li><a href="#">15 Feb, 2022</a></li>
-</div>
-</ul>
-</div>
-<div class="blog-text">
-
-<p class="text">Lorem ipsum dolor sit aconsect dipisicing elit, sed do eiusmod to incididunt uabore etdolore magna aliqua.</p>
-<a class="more btn btn-lg btn-blog-bg" href="#"> Read More </a>
-</div>
-</div>
-</div> 
-</div>
-</div> 
-</div> 
-</section>
-<!--===== BLOG PART ENDS ======-->
-
-<!--====== FOOTER PART START ======--
-
-<footer>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-4 order-md-1">
-        <div class="footer_logo">
-        <a href="#" class="footer_logo">SoDo</a>
-          <p>SoDo is a hyper local platform built specifically for freelancers. It is the perfect way for any
-            freelancer to find jobs and for companies to find skilled professionals at one place.
-          </p>
-        </div>
-      </div>
-      <div class="col-md-4 order-md-3 my-auto">
-        <div class="footer_play">
-          <a href='https://play.google.com/store/apps/details?id=com.sodo.app&hl=en_IN&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-            <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/>
-          </a>
-         
-        </div>
-      </div>
-      <div class="col-md-4 order-md-2">
-        <div class="footer_social">
-          <a href="https://twitter.com/amigozapp">
-            <svg xmlns="http://www.w3.org/2000/svg" class="twitter" width="46.297" height="37.688" viewBox="0 0 46.297 37.688">
-
-              <path d="M48.3,8.365a19.653,19.653,0,0,1-5.463,1.481,9.56,9.56,0,0,0,4.19-5.255,19.005,19.005,0,0,1-6.042,2.315,9.491,9.491,0,0,0-16.2,8.657A26.945,26.945,0,0,1,5.218,5.633a9.629,9.629,0,0,0-1.273,4.792,9.468,9.468,0,0,0,4.213,7.893,9.375,9.375,0,0,1-4.306-1.181v.116a9.491,9.491,0,0,0,7.639,9.259,9.1,9.1,0,0,1-2.546.394,11.343,11.343,0,0,1-1.782-.162,9.514,9.514,0,0,0,8.866,6.574A19.028,19.028,0,0,1,4.315,37.393,18.358,18.358,0,0,1,2,37.254a26.783,26.783,0,0,0,14.56,4.282A26.829,26.829,0,0,0,43.667,14.5V13.272A19.514,19.514,0,0,0,48.3,8.365Z" transform="translate(-2 -3.849)"></path>
-            </svg>
-          </a>
-          <a href="https://www.facebook.com/amigozsocialnetwork/">
-            <svg xmlns="http://www.w3.org/2000/svg" class="fb" width="24.051" height="46.296" viewBox="0 0 24.051 46.296">
-
-              <path d="M26.309,9.685h4.352V2.324A60.442,60.442,0,0,0,24.319,2c-6.3,0-10.6,3.843-10.6,10.88v6.065H6.61v8.241h7.107V48.3h8.519V27.185h7.083l1.065-8.241H22.235V13.69C22.235,11.259,22.883,9.685,26.309,9.685Z" transform="translate(-6.61 -2)"></path>
-            </svg>
-          </a>
-          <a href="https://www.instagram.com/amigozapp/">
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="instagram" width="46.297" height="46.296" viewBox="0 0 46.297 46.296">
-              <path d="M37.51,10.009h0a2.778,2.778,0,1,0,2.778,2.778A2.778,2.778,0,0,0,37.51,10.009Zm10.648,5.6a17.569,17.569,0,0,0-1.065-5.625,11.435,11.435,0,0,0-2.685-4.1,10.88,10.88,0,0,0-4.1-2.662,16.9,16.9,0,0,0-5.625-1.088C32.232,2,31.445,2,25.148,2s-7.083,0-9.537.139A16.9,16.9,0,0,0,9.986,3.227a11.065,11.065,0,0,0-4.1,2.662,10.88,10.88,0,0,0-2.662,4.1,16.9,16.9,0,0,0-1.088,5.625C2,18.065,2,18.852,2,25.148s0,7.083.139,9.537A16.9,16.9,0,0,0,3.227,40.31a10.88,10.88,0,0,0,2.662,4.1,11.065,11.065,0,0,0,4.1,2.662,16.9,16.9,0,0,0,5.625,1.088c2.454.139,3.241.139,9.537.139s7.083,0,9.537-.139a16.9,16.9,0,0,0,5.625-1.088,10.88,10.88,0,0,0,4.1-2.662,11.227,11.227,0,0,0,2.685-4.1,17.569,17.569,0,0,0,1.065-5.625c0-2.454.139-3.241.139-9.537S48.3,18.065,48.158,15.611Zm-4.167,18.8a12.986,12.986,0,0,1-.787,4.306,7.083,7.083,0,0,1-1.736,2.662,7.384,7.384,0,0,1-2.662,1.736A12.987,12.987,0,0,1,34.5,43.9c-2.315.116-3.171.139-9.259.139s-6.945,0-9.259-.139a13.264,13.264,0,0,1-4.491-.694,7.57,7.57,0,0,1-2.546-1.736,6.944,6.944,0,0,1-1.713-2.662,12.824,12.824,0,0,1-.926-4.4c0-2.315-.139-3.171-.139-9.259s0-6.944.139-9.259a12.824,12.824,0,0,1,.81-4.4A6.944,6.944,0,0,1,8.945,8.944a7.269,7.269,0,0,1,2.546-1.852,13.264,13.264,0,0,1,4.4-.787c2.315,0,3.171-.139,9.259-.139s6.945,0,9.259.139a12.986,12.986,0,0,1,4.306.787,7.083,7.083,0,0,1,2.755,1.852A7.083,7.083,0,0,1,43.2,11.491a12.986,12.986,0,0,1,.787,4.4c.116,2.315.139,3.171.139,9.259S44.107,32.093,43.991,34.407ZM25.148,13.273a11.852,11.852,0,1,0,8.419,3.463,11.875,11.875,0,0,0-8.419-3.463Zm0,19.583a7.708,7.708,0,1,1,7.708-7.708,7.708,7.708,0,0,1-7.708,7.708Z" transform="translate(-2 -2)"></path>
-            </svg>
-          </a>
-          <a href="https://www.linkedin.com/company/amigoz-social-network/">
-
-            <svg xmlns="http://www.w3.org/2000/svg" class="linkedin" width="46.019" height="46.297" viewBox="0 0 46.019 46.297">
-              <path d="M44.676,2H5.463a3.357,3.357,0,0,0-3.4,3.31V44.986a3.356,3.356,0,0,0,3.4,3.31H44.676a3.356,3.356,0,0,0,3.4-3.31V5.31A3.357,3.357,0,0,0,44.676,2ZM16.019,40.75H9.074V19.917h6.945ZM12.546,17h0a3.611,3.611,0,1,1,0-7.222,3.634,3.634,0,1,1,0,7.222ZM41.065,40.75H34.121V29.57c0-2.8-1-4.63-3.519-4.63a3.82,3.82,0,0,0-3.565,2.523,4.63,4.63,0,0,0-.231,1.69V40.727H19.861V19.894h6.945v2.94a6.945,6.945,0,0,1,6.273-3.472c4.63,0,7.986,2.986,7.986,9.4Z" transform="translate(-2.06 -2)"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-      <div class="col-md-12 order-md-4">
-        <div class="copy_right">
-          <div class="row">
-            <div class="col-md-4 text-left">
-            <a href="#">Privacy Policy</a> | <a href="#">Terms of Condition</a>
-            </div>
-            <div class="col-md-4 text-center">
-              <p>Made with <span><svg xmlns="http://www.w3.org/2000/svg" width="15.734" height="14.04" viewBox="0 0 15.734 14.04">
-                    <defs>
-                      <style>
-                        .love {
-                          fill: #fb6c6c;
-                        }
-                      </style>
-                    </defs>
-                    <path class="love" d="M18.75,12.07,12,18.81,5.25,12.07a4.26,4.26,0,1,1,6-6.05,1,1,0,0,0,1.42,0,4.27,4.27,0,0,1,6,6.05Z" transform="translate(-4.003 -4.77)"></path>
-                  </svg></span>by SoDo services.</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>-->
-
-  <div id="scroll" class="floating_button">
-    <svg xmlns="http://www.w3.org/2000/svg" class="arrow_up" data-name="Layer 1" viewBox="0 0 24 24">
-      <path fill="#fff" d="M17.71,11.29l-5-5a1,1,0,0,0-.33-.21,1,1,0,0,0-.76,0,1,1,0,0,0-.33.21l-5,5a1,1,0,0,0,1.42,1.42L11,9.41V17a1,1,0,0,0,2,0V9.41l3.29,3.3a1,1,0,0,0,1.42,0A1,1,0,0,0,17.71,11.29Z"></path>
-    </svg>
-  </div>
-</footer>
-
-
-<!--====== FOOTER PART ENDS ======-->
-	
-<!--===FOOTER===-->
-    <section style="background: black; color:white;overflow-x: hidden;">
-    <footer class="container py-5">
-        <div class="row">
-          <div class="col-12 col-md">
-            <h1 style="color:white;">SoDo</h1>
-            <small class="d-block mb-3 text-muted">Give services. Get services.</small>
-          </div>
-          <div class="col-6 col-md">
-            <h5 style="color:white;">Quick Links</h5>
-            <ul class="list-unstyled mt-10">
-              <li><a class="text-muted" href="#">Home</a></li>
-              <li><a class="text-muted" href="#">Features</a></li>
-              <li><a class="text-muted" href="#">About</a></li>
-              <li><a class="text-muted" href="#">Team</a></li>
-              <li><a class="text-muted" href="#">Blog</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-            <h5 style="color:white;">Resources</h5>
-            <ul class="list-unstyled mt-10">
-              <li><a class="text-muted" href="#">Blog</a></li>
-              <li><a class="text-muted" href="#">Privacy</a></li>
-              <li><a class="text-muted" href="#">Terms</a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-            <h5 style="color:white;">Contact Us</h5>
-            <ul class="list-unstyled mt-10">
-	      <li class="text-muted">+919864534356</li>    
-	      <li><a class="text-muted" href='#'>info@gmail.com</a></li>    
-              <li><a class="text-muted" href="#"><i class="fa fa-facebook"></i></a>
-              <a class="text-muted" href="#"><i class="fa fa-twitter"></i></a>
-              <a class="text-muted" href="#"><i class="fa fa-instagram"></i></a>
-	      <a class="text-muted" href="#"><i class="fa fa-linkedin"></i></a></li>
-            </ul>
-          </div>
-          <div class="col-6 col-md">
-          <a href='https://play.google.com/store/apps/details?id=com.sodo.app&hl=en_IN&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'>
-            <img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png' width="190px"/>
-          </a>
-          </div>
-         <div class="col-lg-12 text-center">Made with &hearts; by SoDo services.</div>
-        </div>
-      </footer>
-      </section>	
-
-
-<!-- jQuery library -
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-
-<!-- Popper JS -
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-
-<!-- Latest compiled JavaScript --
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>-->
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-
- <!--====== Main js ======-->
-  <script src="js/vendor/jquery-3.5.1-min.js"></script>
-    <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-    
-    <!--====== Bootstrap js ======-->
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap-4.5.0.min.js"></script>
-
-    <script src="js/slick.min.js"></script>
-    
-     <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
-    
-    <!--====== Plugins js ======-->
-    <script src="js/plugins.js"></script>
-    
-    <!--====== Counter Up js ======-->
-    <script src="js/waypoints.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    
-<script src="js/ajax-contact.js"></script>
-    
-    <!--====== Scrolling Nav js ======-->
  
-    <!--====== wow js ======-->
-    <script src="js/wow.min.js"></script>
+}
 
-    
-    <!--====== Particles js ======-->
-    <script src="js/particles.min.js"></script>
-    
-    <!--====== Main js ======-->
-    <script src="js/main.js"></script>
+.example-image {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  overflow: hidden;
+}
 
-	
+@media (min-width: 690px) {
+  .example-image {
+    width: 290px;
+    max-height: 600px;
+    border-radius: 50px;
+  }
+}
 
-<!-- for ScreenShort area  -->
+@media (min-width: 690px) {
+  .example-image img {
+    width: 100%;
+  }
+}
+
+.phone-bg-img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 11;
+  display: none;
+}
+
+@media (min-width: 690px) {
+  .phone-bg-img {
+    display: block;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+.example-slider .slick-list {
+  margin: 0 -23.5px;
+}
+
+.example-slider .slick-slide {
+  opacity: .2;
+}
+
+.example-slider .slick-center {
+  opacity: 1;
+}
 
 
-    <!--====== Jquery js ======-->
-    <script src="assets/js/vendor/jquery-3.5.1-min.js"></script>
-    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
-    
-    <!--====== Bootstrap js ======-->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap-4.5.0.min.js"></script>
-    <script src="assets/js/slick.min.js"></script>
-    
-     <script src="assets/js/jquery.easing.min.js"></script>
-    
-    <!--====== Plugins js ======-->
-    <script src="assets/js/plugins.js"></script>
-    
-    <!--====== Counter Up js ======-->
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-   <script src="assets/js/ajax-contact.js"></script>	
-       
-    <!--====== Scrolling Nav js ======-->
-    <script src="assets/js/jquery.easing.min.js"></script>
-    <script src="assets/js/scrolling-nav.js"></script>
-    
-    <!--====== wow js ======-->
-    <script src="assets/js/wow.min.js"></script>
-    
-    <!--====== Particles js ======-->
-    <script src="assets/js/particles.min.js"></script>
-    
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
-	
-<!-- Vendor JS-->
-    <script src="./plugins/jquery/jquery.min.js"></script>
-    <script src="./plugins/jquery/jquery-migrate.min.js"></script>
-    <script src="./plugins/bootstrap-4.3.1/js/bootstrap.bundle.js"></script>
 
-    <!-- Plugins JS -->
-    <script src="./plugins/meanmenu/jquery.meanmenu.js"></script>
-    <script src="./plugins/slick-1.8.1/slick.min.js"></script>
-    <script src="./plugins/fancybox-master/jquery.fancybox.min.js"></script>
-        <script src="./plugins/aos-animation/aos.js"></script>
+/*===========================
+     TEAM CSS
+===========================*/
+ .jumbotron{
+        background: url("images/pic1.jpg") center center / cover no-repeat;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);  
+      }
 
-    <!-- Custom JS -->
-    <script src="./js/active.js"></script>
+      .display{
+        color: white;
+      }
 
-<!-- ScreenShots area ends-->
-	
-	
-	
-	
-</body>
+      .lead{
+        color: white;
+      }
+
+ .team-grid {
+     background-repeat: no-repeat;
+     color: #000;
+     overflow-x: hidden
+ }
+
+.title{
+    
+     color: #fff
+ }
+
+ .intro {
+     font-size: 16px;
+     max-width: 100%;
+     margin: 0 auto
+ }
+
+ .intro p {
+     margin-bottom: 0
+ }
+
+ .people {
+     padding: 50px 0;
+     cursor: pointer
+ }
+
+ .item {
+     margin-bottom: 30px
+ }
+
+ .item .box {
+     text-align: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     height: 280px;
+     position: relative;
+     overflow: hidden
+ }
+
+ .item .cover {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background-color: rgba(247, 173, 141,0.35);
+     transition: opacity 0.15s ease-in;
+     opacity: 0;
+     padding-top: 80px;
+     color: #fff;
+     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.15)
+ }
+
+ .item:hover .cover {
+     opacity: 1
+ }
+
+ .item .name {
+     font-weight: bold;
+     margin-bottom: 8px;
+       text-align:center; }
+
+ .item .title {
+     text-transform: uppercase;
+     font-weight: bold;
+     color: black;
+     letter-spacing: 2px;
+     font-size: 13px;
+     margin-bottom: 20px
+ }
+
+ .social {
+     font-size: 15px;
+     letter-spacing: 5px;
+ }
+
+ .social a {
+color:inherit;
+     margin: 80px 2px;
+     display: inline-block;
+     opacity: 0.9
+ }
+
+ .social a:hover {
+     opacity: 1
+ }
+
+.item .box{
+  border: 1px solid rgba(100,111,135,.2);
+  border-radius: 5px;
+  -webkit-box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  -moz-box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  overflow:hidden;
+}
+/*=========================
+      Testimonials
+==========================*/
+
+.testimonial-area{
+  position:relative;
+  margin-top:20px;
+    background-image: linear-gradient(135deg,  rgba(129, 40, 184, 0.8), rgba(36, 52, 149, 0.9) 62%, rgba(28, 23, 77, 0.95)), url("https://assets.website-files.com/545b7de2766e48c834ce8b85/546b2767bbe0f1b63a20e75a_U7Fc1sy5SCUDIu4tlJY3_NY_by_PhilippHenzler_philmotion.de-min.jpg");
+    background-position: 0px 0px, 50% 34%;
+    background-size: auto, cover;
+    background-attachment: scroll, fixed;
+    -webkit-transition: all 500ms ease;
+    transition: all 500ms ease; 
+}
+
+.testimonial-area .shape{
+  position:absolute
+}
+
+.testimonial-author{
+  max-width:490px;
+  height:230px;
+  position:relative
+}
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-author{
+    height:230px
+}
+}
+@media only screen and (min-width:768px) and (max-width:991px){
+  .testimonial-author{
+    max-width:100%
+  }
+}
+@media(max-width:767px){
+  .testimonial-author{
+    height:470px
+  }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px){
+  .testimonial-author{
+    height:230px
+  }
+}
+.testimonial-author .author-image{
+  position:absolute;
+  border-radius:50%;
+  -webkit-box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  -moz-box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  border-radius:50%;
+  overflow:hidden
+}
+.testimonial-author .testimonial-author-wrapper{
+  position:absolute;
+  top:30%;
+  right:20px;
+  width:70px;
+  height:190px;
+  border-radius:70%;
+  -webkit-box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  -moz-box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  -webkit-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%)
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-author .testimonial-author-wrapper{
+    width:150px;
+    height:150px}
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){
+  .testimonial-author .testimonial-author-wrapper{
+    right:auto;
+    left:0;
+    top:auto;
+    bottom:0;
+    -webkit-transform:translateY(0);
+    -moz-transform:translateY(0);
+    -ms-transform:translateY(0);
+    -o-transform:translateY(0);
+    transform:translateY(0)}
+}
+
+@media(max-width:767px){
+  .testimonial-author .testimonial-author-wrapper{
+    right:auto;
+    left:0;
+    top:auto;
+    bottom:0;
+  -webkit-transform:translateY(0);
+  -moz-transform:translateY(0);
+  -ms-transform:translateY(0);
+  -o-transform:translateY(0);
+  transform:translateY(0)
+  }
+}
+
+.testimonial-author .testimonial-author-wrapper .single-author{
+  border-radius:50%;
+  padding:4px;
+  overflow:hidden;
+  background-color:#fff
+}
+
+.testimonial-author .testimonial-author-wrapper .single-author img{
+  border-radius:50%
+}
+
+.testimonial-wrapper .section-title{
+  max-width:470px
+}
+
+@media(max-width:767px){
+  .testimonial-wrapper .section-title{
+  max-width:270px
+}
+}
+
+.single-testimonial .holder-name{
+  font-size:22px;
+  font-weight:600;
+  margin-top:35px
+}
+
+@media(max-width:767px){
+  .single-testimonial .holder-name{
+    font-size:18px
+  }
+}
+
+.single-testimonial .holder-name span{
+  font-size:16px;
+  font-style:italic;
+  font-weight:400
+}
+
+.testimonial-content{
+  margin-left: 30px;
+  top: -90px
+}
+
+@media(max-width:767px){
+  .testimonial-content{
+    margin-left:30px
+}
+
+.single-testimonial .holder-name span{
+    font-size:14px
+ }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-content{
+    margin-left:40px;
+    margin-top:-90px
+  }
+}
+
+
+.section-title .title {
+  font-size: 38px;
+  font-weight: 700;
+  line-height: 42px; 
+}
+
+@media (max-width: 767px) {
+    .section-title .title 
+    {
+      font-size: 20px; 
+    } 
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .section-title .title {
+      font-size: 30px; 
+    } 
+}
+
+.section-title .title span {
+    font-weight: 400;
+    display: contents; 
+}
+
+.section-title .sub-title {
+  font-size: 30px;
+  font-weight: 650;
+  color: #ffa600;
+  text-transform: uppercase; 
+}
+
+@media (max-width: 767px) {
+  .section-title .sub-title {
+      font-size: 25px; 
+  } 
+}
+
+.section-title .title {
+  font-size: 32px;
+  padding-top: 10px; 
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .section-title .title {
+      font-size: 30px; 
+    } 
+}
+
+@media (max-width: 767px) {
+    .section-title .title {
+      font-size: 24px; 
+    } 
+}
+
+.section-title .title span {
+    font-weight: 400;
+    display: contents; 
+}
+
+.testimonial-area{
+  position:relative;
+  margin-top:50px
+}
+.testimonial-area .shape{
+  position:absolute
+}
+.testimonial-area .shape.shape-1{
+  top:50%;
+  left:170px;
+  -webkit-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%)
+}
+.testimonial-area .shape.shape-2{
+  bottom:35px;
+  left:30%
+}
+.testimonial-area .shape.shape-3{
+  top:46%;
+  left:30%
+}
+.testimonial-area .shape.shape-4{
+  top:15%;
+  left:40%
+}
+.testimonial-area .shape.shape-5{
+  top:8%;
+  right:35%
+}
+.testimonial-area .shape.shape-6{
+  top:11%;
+  right:14%
+}
+.testimonial-area .shape.shape-7{
+  bottom:7%;
+  right:28%
+}
+.testimonial-shape-1{
+  position:absolute;
+  top:0;
+  left:0;
+  width:50%;
+  height:100%;
+  z-index:-1
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){
+  .testimonial-shape-1{
+    width:100%;
+    height:50%
+  }
+}
+
+.testimonial-author{
+  max-width:190px;
+  height:590px;
+  position:relative
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-author{
+    height:430px
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){
+  .testimonial-author{
+    max-width:100%
+  }
+}
+
+@media(max-width:767px){
+  .testimonial-author{
+    height:470px
+  }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px){
+  .testimonial-author{
+    height:430px
+  }
+}
+
+.testimonial-author .author-image{
+  position:absolute;
+  border-radius:50%;
+  -webkit-box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  -moz-box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  border-radius:50%;
+  overflow:hidden
+}
+
+.testimonial-author .author-image.author-1{
+  width:100px;
+  height:100px;
+  right:50px;
+  top:0
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-author .author-image.author-1{
+    width:90px;
+    height:90px
+  }
+}
+
+@media(max-width:767px){
+  .testimonial-author .author-image.author-1{
+    right:0
+  }
+}
+
+.testimonial-author .author-image.author-2{
+  width:95px;
+  height:95px;
+  left:20px;
+  top:20px
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-author .author-image.author-2{
+    width:85px;height:85px
+  }
+}
+
+.testimonial-author .author-image.author-3{
+  width:85px;
+  height:85px;
+  left:35%;
+  top:50%;
+  -webkit-transform:translate(-50%,-50%);
+  -moz-transform:translate(-50%,-50%);
+  -ms-transform:translate(-50%,-50%);
+  -o-transform:translate(-50%,-50%);
+  transform:translate(-50%,-50%)
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-author .author-image.author-3{
+    width:75px;
+    height:75px
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){
+  .testimonial-author .author-image.author-3{
+    left:60%
+  }
+}
+
+@media(max-width:767px){
+  .testimonial-author .author-image.author-3{
+    left:auto;right:0;
+    -webkit-transform:translate(0,0);
+    -moz-transform:translate(0,0);
+    -ms-transform:translate(0,0);
+    -o-transform:translate(0,0)
+    ;transform:translate(0,0);
+    top:30%
+  }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px){
+  .testimonial-author .author-image.author-3{
+    left:60%
+  }
+}
+
+.testimonial-author .author-image.author-4{
+  width:110px;
+  height:110px;
+  left:0;
+  bottom:0
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-author .author-image.author-4{
+    width:100px;
+    height:100px
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){
+  .testimonial-author .author-image.author-4{
+    left:100px;
+    bottom:230px
+  }
+}
+
+@media(max-width:767px){
+  .testimonial-author .author-image.author-4{
+    left:0;
+    bottom:210px
+  }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px){
+  .testimonial-author .author-image.author-4{
+    left:100px;
+    bottom:185px
+  }
+}
+
+.testimonial-author .author-image.author-5{
+  width:110px;
+  height:110px;
+  right:110px;
+  bottom:0
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-author .author-image.author-5{
+    right:40px;
+    width:100px;
+    height:100px
+  }
+}
+
+@media(max-width:767px){
+  .testimonial-author .author-image.author-5{
+    right:0;
+    bottom:24%
+  }
+}
+
+@media only screen and (min-width:576px) and (max-width:767px){
+  .testimonial-author .author-image.author-5{
+    right:70px;
+    bottom:0
+    }
+}
+
+.testimonial-author .testimonial-author-wrapper{
+  position:absolute;
+  top:35%;
+  right:0;
+  width:140px;
+  height:140px;
+  border-radius:50%;
+  -webkit-box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  -moz-box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  box-shadow:0 9px 40px 0 rgba(41,54,81,.34);
+  -webkit-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%)
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-author .testimonial-author-wrapper{
+    width:170px;
+    height:170px;
+    top:38%
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){
+  .testimonial-author .testimonial-author-wrapper{
+    right:auto;
+    left:35%;
+    top:10%;
+    bottom:0;
+    -webkit-transform:translateY(0);
+    -moz-transform:translateY(0);
+    -ms-transform:translateY(0);
+    -o-transform:translateY(0);
+    transform:translateY(0)}
+}
+
+@media only screen and (min-width:576px) and (max-width:767px){
+  .testimonial-author .testimonial-author-wrapper{
+    right:auto;
+    left:85%;
+    top:10%;
+    bottom:0;
+    -webkit-transform:translateY(0);
+    -moz-transform:translateY(0);
+    -ms-transform:translateY(0);
+    -o-transform:translateY(0);
+    transform:translateY(0)
+  }
+}
+
+@media only screen and (min-width: 410px) and (max-width: 575px)
+{
+  .testimonial-author .testimonial-author-wrapper{
+    right:auto;
+    left:65%;
+    top:10%;
+    width: 100px;
+    height: 100px;
+    bottom:0;
+    -webkit-transform:translateY(0);
+    -moz-transform:translateY(0);
+    -ms-transform:translateY(0);
+    -o-transform:translateY(0);
+    transform:translateY(0);
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 409px){
+  .testimonial-author .testimonial-author-wrapper{
+    right:auto;
+    left:45%;
+    top:10%;
+    bottom:0;
+    -webkit-transform:translateY(0);
+    -moz-transform:translateY(0);
+    -ms-transform:translateY(0);
+    -o-transform:translateY(0);
+    transform:translateY(0)
+  }
+}
+.testimonial-author .testimonial-author-wrapper .testimonial-quote{
+  width:60px;
+  height:60px;
+  background-color:#fff;
+  border-radius:50%;
+  position:absolute;
+  right:-25px;
+  top:55%;
+  z-index:5;
+  -webkit-transform:translateY(-50%);
+  -moz-transform:translateY(-50%);
+  -ms-transform:translateY(-50%);
+  -o-transform:translateY(-50%);
+  transform:translateY(-50%)
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-author .testimonial-author-wrapper .testimonial-quote{
+    width:50px;
+    height:50px
+  }
+}
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-author .testimonial-author-wrapper .testimonial-quote img{
+    width:25px
+  }
+}
+
+.testimonial-author .testimonial-author-wrapper .single-author{
+  border-radius:50%;
+  padding:4px;
+  overflow:hidden;
+  background-color:#fff
+}
+
+.testimonial-author .testimonial-author-wrapper .single-author img{
+  border-radius:50%
+}
+
+.single-testimonial .section-title{
+  max-width:470px
+}
+
+.single-testimonial .holder-name{
+  font-size:22px;
+  font-weight:600;
+  margin-top:35px
+}
+
+@media(max-width:767px){
+  .single-testimonial .holder-name{
+    font-size:18px
+  }
+}
+
+.single-testimonial .holder-name span{
+  font-size:16px;
+  font-style:italic;
+  font-weight:400
+}
+
+@media(max-width:767px){
+  .single-testimonial .holder-name span{
+    font-size:14px
+  }
+}
+ 
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-content{
+    margin-left:40px;
+    top: 5px
+  }
+}
+
+@media only screen and (min-width:768px) and (max-width:991px){
+  .testimonial-content{
+    top:-280px
+  }
+}
+
+@media(max-width:767px){
+  .testimonial-content{
+    top:-150px
+  }
+}
+
+ .testimonial-content .slick-arrow{
+    position:absolute;
+    bottom:-65px;
+    left:0;
+    font-size:24px;
+    cursor:pointer;
+    color: #FFFFFF
+  }
+
+  .testimonial-content .slick-arrow.next{
+    left:40px
+  }
+
+@media only screen and (min-width:992px) and (max-width:1199px){
+  .testimonial-content .slick-arrow{
+    bottom:-65px;
+  }
+
+  .testimonial-content .slick-arrow.next{
+    left:40px
+  }
+}
+
+@media(max-width:767px){
+   .testimonial-content .slick-arrow{
+    bottom:-85px;
+  }
+
+  .testimonial-content .slick-arrow.next{
+    left:40px
+  }
+}
+.testimonial-wrapper .main-btn{
+  margin-left: 30px;
+  margin-top:-30px
+}
+
+@media only screen and (min-width:992px) and (max-width:1200px){
+  .testimonial-wrapper .main-btn{
+  margin-left: 37px;
+  margin-top:60px
+}
+}
+
+@media only screen and (min-width:767px) and (max-width:992px){
+  .testimonial-wrapper .main-btn{
+      margin-top:-370px
+}
+}
+
+@media(max-width:767px){
+   .testimonial-wrapper .main-btn{
+      margin-top:-120px;
+      overflow-x: hidden;
+}
+}
+
+.testimonial-content .single-testimonial p{
+  color: #FFFFFF
+}
+
+.testimonial-content .holder-name{
+  color: #FFFFFF
+}
+
+
+
+  /*===========================
+     BLOG CSS
+===========================*/
+
+.single-blog .blog-image 
+      img{border-top-left-radius:10px;border-top-right-radius:10px;width:100%;}
+     
+    .single-blog .blog-content{
+      padding:0 25px 25px;
+      margin-top:-18px;
+      position:relative;border:1px;
+      border:2px solid rgba(100,111,135,.2);
+      border-bottom-left-radius:10px;
+      border-bottom-right-radius:10px;border-top:0}
+    .single-blog .blog-content .blog-meta .author{
+      width:35px;height:100px;
+      border-radius:0%;
+      padding:2px;
+      background-color:#fff;
+      overflow:hidden}
+    .single-blog .blog-content .blog-meta .author img{
+        border-radius:0%}
+    .single-blog .blog-content .blog-meta .blog-list{
+      margin-top:10px}
+    .single-blog .blog-content .blog-meta .blog-list li{
+      display:inline-block;margin-left:50px}
+    .single-blog .blog-content .blog-meta .blog-list li:first-child{
+      margin-left:0}
+    .single-blog .blog-content .blog-meta .blog-list li a{
+      font-size:14px;
+      color:#646f87;
+      -webkit-transition:all .3s ease-out 0s;
+      -moz-transition:all .3s ease-out 0s;
+      -ms-transition:all .3s ease-out 0s;
+      -o-transition:all .3s ease-out 0s;
+      transition:all .3s ease-out 0s}
+    .single-blog .blog-content .blog-meta .blog-list li a:hover{
+        color:#fe8464}
+    .single-blog .blog-content .blog-text a{
+          font-size:22px;
+          color:#14171c;
+          font-weight:600;
+          margin-top:25px;
+          -webkit-transition:all .3s ease-out 0s;
+          -moz-transition:all .3s ease-out 0s;
+          -ms-transition:all .3s ease-out 0s;
+          -o-transition:all .3s ease-out 0s;
+          transition:all .3s ease-out 0s}
+          .blog-title a{
+          font-size:20px;
+          color:#14171c;
+          font-weight:600;
+          margin-top:25px;
+          -webkit-transition:all .3s ease-out 0s;
+          -moz-transition:all .3s ease-out 0s;
+          -ms-transition:all .3s ease-out 0s;
+          -o-transition:all .3s ease-out 0s;
+          transition:all .3s ease-out 0s}
+          @media(max-width:767px){
+            .single-blog .blog-content .blog-texta{
+              font-size:18px}
+            .blog-title a{
+              font-size:18px}}
+          @media only screen and (min-width:576px) and (max-width:767px){
+            .single-blog .blog-content .blog-text a{
+              font-size:22px}
+            .blog-title a{
+              font-size:22px}}
+            .single-blog .blog-content .blog-text a:hover{
+              color:#fe8464}
+              .blog-title a:hover{
+              color:#fe8464}
+            .single-blog .blog-content .blog-text .text{
+              margin-top:20px}
+            .single-blog .blog-content .blog-text .more{
+              font-size:16px;
+              font-weight:600;
+              color:#646f87;
+              margin-top:20px;
+              -webkit-transition:all .3s ease-out 0s;
+              -moz-transition:all .3s ease-out 0s;
+              -ms-transition:all .3s ease-out 0s;
+              -o-transition:all .3s ease-out 0s;
+              transition:all .3s ease-out 0s}
+            .single-blog .blog-content .blog-text .more .line-1{
+              width:0;
+              height:2px;
+              background-color:#fe8464;
+              -webkit-transition:all .3s ease-out 0s;
+              -moz-transition:all .3s ease-out 0s;
+              -ms-transition:all .3s ease-out 0s;
+              -o-transition:all .3s ease-out 0s;
+              transition:all .3s ease-out 0s;
+              margin-bottom:5px}
+            .single-blog .blog-content .blog-text .more .line-2{
+              width:20px;
+              height:2px;
+              background-color:#646f87;
+              margin-right:10px;
+              -webkit-transition:all .3s ease-out 0s;
+              -moz-transition:all .3s ease-out 0s;
+              -ms-transition:all .3s ease-out 0s;
+              -o-transition:all .3s ease-out 0s;
+              transition:all .3s ease-out 0s;
+              margin-left:10px;
+              margin-bottom:5px}
+              .single-blog .blog-content .blog-text .more:hover{
+                color:#fe8464}
+              .single-blog .blog-content .blog-text .more:hover .line-1{
+                width:20px;margin-right:10px}
+              .single-blog .blog-content .blog-text .more:hover .line-2{
+                width:0;margin-left:10px;
+              }
+
+
+.btn-blog-bg {
+    border: 1px solid #eee;
+    border-top-color: rgb(238, 238, 238);
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-right-color: rgb(238, 238, 238);
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-bottom-color: rgb(238, 238, 238);
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-left-color: rgb(238, 238, 238);
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    border-radius: 30px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-bottom-left-radius: 30px;
+    color: #333;
+    font-size: 14px;
+    padding: 10px 30px;
+    padding-top: 10px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    transition: all .2s ease 0s;
+    transition-property: all;
+    transition-duration: 0.2s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+/*===========================
+       11.FOOTER  css 
+===========================*/
+
+
+  .floating_button {
+    position: fixed;
+    width: 3em;
+    height: 3em;
+    bottom: 2.2rem;
+    right: 2.2rem;
+    background-color: salmon;
+    color: #FFF;
+    text-align: center;
+    border-radius: 5px;
+    cursor: pointer;
+    z-index: 9999; }
+  
+  .floating_button svg {
+    width: 100%; }
+  
+  .floating_button:hover {
+    text-decoration: none;
+    background-color: orangered; }
+  
+  .floating_button p {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+    color: #fff;
+    letter-spacing: 3px;
+    font-weight: 300;
+    padding: 0px 0px 5px; }
+  
+.lni{
+  display: inline-block;
+  font:normal normal normal lem/1 'LineIcons';
+  font-style: normal;
+  font-variant-ligatures: normal;
+  font-variant-caps: normal;
+  font-variant-numeric: normal;
+  font-variant-east-asian: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  font-size: lem;
+  line-height: 1;
+  font-family: LineIcons;
+  speak: none;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
+.lni-chevron-up::before {
+    content: "\ea5e";
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+
+
+
+
+
+
+
+
