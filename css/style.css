@@ -614,7 +614,7 @@ p {
   .header-hero-content .header-title-black {
     font-size: 38px;
     font-weight: 700;
-    color: #000000; }
+    color: #000; }
     @media (max-width: 767px) {
       .header-hero-content .header-title-black {
         font-size: 24px; } }
@@ -1325,13 +1325,7 @@ color:inherit;
   text-transform: uppercase; 
 }
 
-@media only screen and (min-width: 576px) and (max-width: 767px) {
-  .section-title .sub-title {
-      font-size: 25px; 
-  } 
-}
-
-@media (max-width: 576px) {
+@media (max-width: 767px) {
   .section-title .sub-title {
       font-size: 25px; 
   } 
